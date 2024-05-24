@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz App</title>
+<style>
+    /* Some basic styling */
+    body {
+        font-family: Aeonik Mono;
+        background-color: #200052;
+        color: white;
+    }
+    h1{
+        font-family: "Hoves Pro", sans-serif; /* Apply Hoves Pro font to all headings */
+        font-size: 36px;
+        color: #A0055D;
+        text-align: center;
+    }
+    p {
+        font-size: 22px;
+        color:black; 
+        
+    }
+    label {
+    font-size: 18px; /* Set font size for labels */
+}
+    .quiz-container {
+        max-width: 90%;
+        margin: 20px auto;
+        padding: 20px;
+        border: 2px solid #ccc;
+        border-radius: 20px;
+        background-color: #836EF9; /* Set quiz container background color */
+        color: white; /* Set quiz container text color */
+    }
+    form#quiz-form {
+        background-color: #836EF9; /* Add background color to the form */
+        padding: 20px; /* Add padding to the form to match the container */
+        border-radius: 20px; /* Add border-radius to match the container */
+    }
+    .question {
+        margin-bottom: 20px;
+    }
+    .logo {
+        display: flex;
+        justify-content:space-around;
+        margin-bottom: 20px;
+    }
+    .logo-image {
+    width: 60%; /* Adjust the width to your desired size */
+    /* You can also set the height to auto if you want the image to maintain its aspect ratio */
+    height: auto;
+}
+    input[type="submit"] {
+        padding: 10px 20px; /* Adjust padding to increase button size */
+        font-size: 16px; /* Adjust font size to increase button size */
+
+    }
+    .correct-answer {
+        color: #00f8a5;
+    }
+    .incorrect-answer {
+        color:#8d0101;
+    }
+</style>
+</head>
+<body>
+
+
+
+
+    <div class="logo">
+        <a href="index.html" class="logo">
+        <img src="file:///C:/Users/schol/Auto-GPT/monad-logo.png" alt="Logo" class="logo-image">
+    </a>
+    </div>
+<div class="quiz-container">
+    <h1>Monad DeFi Ecosystem Quiz</h1>
+    <form id="quiz-form">
+        <div class="question">
+            <p>1. Which of the below protocols is not a DEX?
+                </p>
+            <label>
+                <input type="radio" name="q1" value="Tayaswap"> Tayaswap
+            </label><br>
+            <label>
+                <input type="radio" name="q1" value="Nitro Finance"> Nitro Finance
+            </label><br>
+            <label>
+                <input type="radio" name="q1" value="Pike Finance"> Pike Finance
+            </label><br>
+            <label>
+                <input type="radio" name="q1" value="Ambient Finance"> Ambient Finance
+            </label><br>
+        </div>
+        <div class="question">
+            <p>2. What is Magma DAO?
+                </p>
+            <label>
+                <input type="radio" name="q2" value="Decentralized Exchange"> Decentralized Exchange
+            </label><br>
+            <label>
+                <input type="radio" name="q2" value="Lending/borrowing Protocol"> Lending/borrowing Protocol
+            </label><br>
+            <label>
+                <input type="radio" name="q2" value="Stablecoin Protocol"> Stablecoin Protocol
+            </label><br>
+            <label>
+                <input type="radio" name="q2" value="Liquid Staking Protocol"> Liquid Staking Protocol
+            </label><br>
+        </div>
+        <div class="question">
+            <p>3. Which of the below DEX is not a native DEX?</p>
+            <label>
+                <input type="radio" name="q3" value="Nitro Finance"> Nitro Finance
+            </label><br>
+            <label>
+                <input type="radio" name="q3" value="Balancer"> Balancer
+            </label><br>
+            <label>
+                <input type="radio" name="q3" value="Shrimp Dex"> Shrimp Dex
+            </label><br>
+            <label>
+                <input type="radio" name="q3" value="Taya swap"> Taya swap
+            </label><br>
+        </div>
+        <div class="question">
+            <p>4. On Primex Finance, users have the option to participate in:</p>
+            <label>
+                <input type="radio" name="q4" value="Spot trading"> Spot trading
+            </label><br>
+            <label>
+                <input type="radio" name="q4" value="Leverage trading"> Leverage trading
+            </label><br>
+            <label>
+                <input type="radio" name="q4" value="Both 1) & 2)"> Both 1) & 2)
+            </label><br>
+            <label>
+                <input type="radio" name="q4" value="Lending / Borrowing"> Lending / Borrowing
+            </label><br>
+            <label>
+                <input type="radio" name="q4" value="All of the above"> All of the above
+            </label><br>
+        </div>
+        <div class="question">
+            <p>5. Two core features of Tayaswap are:</p>
+            <label>
+                <input type="radio" name="q5" value="Concentrated Liquidity pools"> Concentrated Liquidity pools
+            </label><br>
+            <label>
+                <input type="radio" name="q5" value="Dynamic pools"> Dynamic pools
+            </label><br>
+            <label>
+                <input type="radio" name="q5" value="Fixed Liquidity pools"> Fixed Liquidity pools
+            </label><br>
+            <label>
+                <input type="radio" name="q5" value="Both option 1) and 2)"> Both option 1) and 2)
+            </label><br>
+            <label>
+                <input type="radio" name="q5" value="Both option 1) and 3)"> Both option 1) and 3)
+            </label><br>
+        </div>
+        <div class="question">
+            <p>6. What makes Ambient finance a unique DEX -
+            </p>
+            <label>
+                <input type="radio" name="q6" value="Anyone can launch a token on it"> Anyone can launch a token on it
+            </label><br>
+            <label>
+                <input type="radio" name="q6" value="All the fees generated from the liquidity pool go to LPs only"> All the fees generated from the liquidity pool go to LPs only
+            </label><br>
+            <label>
+                <input type="radio" name="q6" value="It combines concentrated (i.e., UniV3 style), ambient (i.e., UniV2 style), and knockout liquidity (which behaves like limit orders)"> It combines concentrated (i.e., "UniV3 style"), ambient (i.e., "UniV2 style"), and knockout liquidity (which behaves like limit orders)
+            </label><br>
+            <label>
+                <input type="radio" name="q6" value="Fees generated by concentrated LP positions are automatically reinvested back into the poo"> Fees generated by concentrated LP positions are automatically reinvested back into the poo
+            </label><br>
+        </div>
+        <div class="question">
+            <p>7. Nitro finance enable users to ______, ________, and _______ within a single pool
+            </p>
+            <label>
+                <input type="radio" name="q7" value="Leverage, options, swap"> Leverage, options, swap
+            </label><br>
+            <label>
+                <input type="radio" name="q7" value="Lend, borrow, swap">  Lend, borrow, swap
+            </label><br>
+            <label>
+                <input type="radio" name="q7" value=" Stake, restake, provide liquidity">  Stake, restake, provide liquidity
+            </label><br>
+            <label>
+                <input type="radio" name="q7" value="Stake, restake, liquid staking"> Stake, restake, liquid staking
+            </label><br>
+        </div>
+        <div>
+            <div class="question">
+                <p>8. Dyson Finance is a DEX that democratizes liquidity for everyone, driving the paradigm shift of "Retail Investors as LPs."
+
+
+                    It provide its service through two features. <br><br>The name of those features are -
+                </p>
+                <label>
+                    <input type="radio" name="q8" value="Concentrated Liquidity, Dynamic Pools"> Concentrated Liquidity, Dynamic Pools
+                </label><br>
+                <label>
+                    <input type="radio" name="q8" value="Concentrated liquidity, Dynamic AMM">  Concentrated liquidity, Dynamic AMM
+                </label><br>
+                <label>
+                    <input type="radio" name="q8" value="Dual Investment, Dynamic AMM">  Dual Investment, Dynamic AMM
+                </label><br>
+                <label>
+                    <input type="radio" name="q8" value="Dual investment, MEV extraction"> Dual investment, MEV extraction
+                </label><br>
+        </div>
+       
+        <div>
+            <div class="question">
+                <p>9. Unlike other AMMs that provide 50/50 weighted pools, Balancer enables users to build pools with custom weighting such as 80/20, 60/40.
+                    <br><br>What is the core benefit of providing liquidity to such custom weighted pools?
+                   
+                </p>
+                <label>
+                    <input type="radio" name="q9" value="LPs can easily manage impermanent loss for a particular token"> LPs can easily manage impermanent loss for a particular token
+                </label><br>
+                <label>
+                    <input type="radio" name="q9" value="Less slippage for traders"> Less slippage for traders
+                </label><br>
+                <label>
+                 <input type="radio" name="q9" value="Dynamic fees" > Dynamic fees
+                </label><br>
+                <label>
+                    <input type="radio" name="q9" value="These pools are better suited for stablecoin pairs"> These pools are better suited for stablecoin pairs
+                </label><br>
+        </div>
+        <div>
+            <div class="question">
+                <p>10. Catalyst AMM can be deployed on any chain and allows liquidity to be sourced from any other connected ecosystem such as Ethereum, Cosmos and L2s.
+
+                <br><br>
+                    Is the statement above true or false?
+                </p>
+                <label>
+                    <input type="radio" name="q10" value="True"> True
+                </label><br>
+                <label>
+                    <input type="radio" name="q10" value="False"> False
+                </label>
+   
+        </div>
+        <div>
+            <div class="question">
+                <p>11. Pancake swap is the _______ DEX in terms of TVL.
+                </p>
+                <label>
+                    <input type="radio" name="q11" value="Biggest"> Biggest
+                </label><br>
+                <label>
+                    <input type="radio" name="q11" value="Second Biggest"> Second Biggest
+                </label><br>
+                <label>
+                    <input type="radio" name="q11" value="Third Biggest"> Third Biggest
+                </label><br>
+                <label>
+                    <input type="radio" name="q11" value="Fourth Biggest"> Fourth Biggest
+                </label><br>
+   
+        </div>
+        <div>
+            <div class="question">
+                <p>12. Among the below-mentioned DEX, which one is the oldest that will be launching on Monad?
+                </p>
+                <label>
+                    <input type="radio" name="q12" value="Pancake Swap"> Pancake Swap
+                </label><br>
+                <label>
+                    <input type="radio" name="q12" value="Primex Finance"> Primex Finance
+                </label><br>
+                <label>
+                    <input type="radio" name="q12" value="Ambient Finance"> Ambient Finance
+                </label><br>
+                <label>
+                    <input type="radio" name="q12" value="Balancer"> Balancer
+                </label><br>
+   
+        </div>
+        <div>
+            <div class="question">
+                <p>13. Elixir is a modular DPoS network built to power liquidity on ______________.
+                </p>
+                <label>
+                    <input type="radio" name="q13" value="AMM Dexes"> AMM Dexes 
+                </label><br>
+                <label>
+                    <input type="radio" name="q13" value="Lending/Borrowing pools"> Lending/Borrowing pools
+                </label><br>
+                <label>
+                    <input type="radio" name="q13" value="Orderbook Dexes"> Orderbook Dexes
+                </label><br>
+                <label>
+                    <input type="radio" name="q13" value="Staking pools"> Staking pools
+                </label><br>
+   
+        </div>
+
+        <div>
+            <div class="question">
+                <p>14. Swaap finance generates superior yield for the LPs by using ___________
+                </p>
+                <label>
+                    <input type="radio" name="q14" value="Market Making Strategies"> Market Making Strategies
+                </label><br>
+                <label>
+                    <input type="radio" name="q14" value="Looping strategy"> Looping strategy
+                </label><br>
+                <label>
+                    <input type="radio" name="q14" value="Leverage "> Leverage 
+                </label><br>
+                <label>
+                    <input type="radio" name="q14" value="Both  1) & 2) "> Both  1) & 2) 
+                </label><br>
+   
+        </div>
+    
+<div>
+    <div class="question">
+        <p> 15. Timeswap is a lending-borrowing protocol that offers many features to its users. Some of the features are mentioned below. Please select the incorrect option.
+        </p>
+        <label>
+            <input type="radio" name="q15" value="Oracleless"> Oracleless 
+        </label><br>
+        <label>
+            <input type="radio" name="q15" value="Permissioned"> Permissioned
+        </label><br>
+        <label>
+            <input type="radio" name="q15" value="Non-liquidatable loans"> Non-liquidatable loans
+        </label><br>
+        <label>
+            <input type="radio" name="q15" value="Fixed term loans"> Fixed term loans
+        </label><br>
+        <label>
+            <input type="radio" name="q15" value="Immutable"> Immutable
+        </label><br>
+
+</div>
+<div>
+    <div class="question">
+        <p>16. Curvance aims to be an all-in-one platform for yield optimization. It will provide features such as:
+        </p>
+        <label>
+            <input type="radio" name="q16" value="Yield auto-compounding "> Yield auto-compounding  
+        </label><br>
+        <label>
+            <input type="radio" name="q16" value="Peer to peer lending/borrowing"> Peer to peer lending/borrowing
+        </label><br>
+        <label>
+            <input type="radio" name="q16" value="Allows integrating third party strategies"> Allows integrating third party strategies
+        </label><br>
+        <label>
+            <input type="radio" name="q16" value="All of the above"> All of the above
+        </label><br>
+
+</div>
+<div>
+    <div class="question">
+        <p>17. Marginfi is which type of lending/borrowing protocol
+        </p>
+        <label>
+            <input type="radio" name="q17" value="Peer-to-Peer"> Peer-to-Peer
+        </label><br>
+        <label>
+            <input type="radio" name="q17" value="Peer-to-Pool"> Peer-to-Pool
+        </label><br>
+
+</div>
+<div>
+    <div class="question">
+        <p> 18. AcryptoS, a multi-chain liquidity manager and yield optimizer, has expanded to how many chains? 
+        </p>
+        <label>
+            <input type="radio" name="q18" value="5"> 5 
+        </label><br>
+        <label>
+            <input type="radio" name="q18" value="12"> 12
+        </label><br>
+        <label>
+            <input type="radio" name="q18" value="17"> 17
+        </label><br>
+        <label>
+            <input type="radio" name="q18" value="24"> 24
+        </label><br>
+
+</div>  
+<div>
+    <div class="question">
+        <p>19. Pendle, a permissionless yield-bearing protocol, wraps yield-bearing tokens into SY (standardized yield tokens), which is broken down into two tokens, i.e. :
+        </p>
+        <label>
+            <input type="radio" name="q19" value="Principal token, Yield token"> Principal token, Yield token 
+        </label><br>
+        <label>
+            <input type="radio" name="q19" value="Staked token, Yield token"> Staked token, Yield token
+        </label><br>
+        <label>
+            <input type="radio" name="q19" value="
+            Utility token, Governance token
+            "> 
+            Utility token, Governance token
+            
+        </label><br>
+        <label>
+            <input type="radio" name="q19" value="
+            Leveraged token, Yield token
+            "> 
+            Leveraged token, Yield token
+            
+        </label><br>
+
+</div>  
+
+<div>
+    <div class="question">
+        <p>20. Other than enabling Monad token holders to generate staking rewards while remaining liquid, Magma DAO is also working on:
+        </p>
+        <label>
+            <input type="radio" name="q20" value="Distributed Validator technology (DVT)"> Distributed Validator technology (DVT) 
+        </label><br>
+        <label>
+            <input type="radio" name="q20" value="Restaking"> Restaking
+        </label><br>
+        <label>
+            <input type="radio" name="q20" value=" Data Availibility solution"> Data Availibility solution
+            
+        </label><br>
+        <label>
+            <input type="radio" name="q20" value="Yield tokens trading"> Yield tokens trading
+        </label><br>
+</div>
+<div>
+    <div class="question">
+        <p>21. Dexponenet uses the term 'clean staking' for it's liquid staking service What does it mean?
+        </p>
+        <label>
+            <input type="radio" name="q21" value="All involved parties should not use any other liquid staking services other than Dexponent"> All involved parties should not use any other liquid staking services other than Dexponent
+        </label><br>
+        <label>
+            <input type="radio" name="q21" value="All involved parties undergo KYC and AML checks"> All involved parties undergo KYC and AML checks
+        </label><br>
+        <label>
+            <input type="radio" name="q21" value="All involved parties must have a good credit score"> All involved parties must have a good credit score
+            
+        </label><br>
+        <label>
+            <input type="radio" name="q21" value="All involved parties must be long-time users of crypto"> All involved parties must be long-time users of crypto
+        </label><br>
+</div>
+
+<div>
+    <div class="question">
+        <p>22. Orderly does not have a front end; instead, it provides essential services like spot & perpetual orderbooks to projects built on top of it.<br> How many front ends are built on top of orderly?
+            
+        </p>
+        <label>
+            <input type="radio" name="q22" value="6"> 6 
+        </label><br>
+        <label>
+            <input type="radio" name="q22" value="9"> 9 
+        </label><br>
+        <label>
+            <input type="radio" name="q22" value="11"> 11 
+            
+        </label><br>
+        <label>
+            <input type="radio" name="q22" value="14"> 14 
+        </label><br>
+</div>
+
+<div>
+    <div class="question">
+        <p>23. Aori, and orderbook protocol offers feature like gasless order creation and cancellation.<br>Above statement is correct?
+        </p>
+        <label>
+            <input type="radio" name="q23" value="Yes"> Yes 
+        </label><br>
+        <label>
+            <input type="radio" name="q23" value="No"> No
+        </label><br>
+</div>
+
+
+<div>
+    <div class="question">
+        <p>24. How does the Convergence RFQ protocol address the issue of custody risk?
+            
+        </p>
+        <label>
+            <input type="radio" name="q24" value="By requiring makers and takers to lock their funds in a custodial account"> By requiring makers and takers to lock their funds in a custodial account 
+        </label><br>
+        <label>
+            <input type="radio" name="q24" value="By facilitating trade settlement on-chain without requiring custody of funds"> By facilitating trade settlement on-chain without requiring custody of funds
+        </label><br>
+        <label>
+            <input type="radio" name="q24" value="By implementing a centralized governance model for fund management"> By implementing a centralized governance model for fund management
+            
+        </label><br>
+        <label>
+            <input type="radio" name="q24" value="By imposing strict regulations on the movement of funds"> By imposing strict regulations on the movement of funds 
+        </label><br>
+</div>
+
+<div>
+    <div class="question">
+        <p>25. Which of the below statements about Good entry protocol is incorrect?
+            
+        </p>
+        <label>
+            <input type="radio" name="q25" value="Trading with up to 1000x leverage"> Trading with up to 1000x leverage 
+        </label><br>
+        <label>
+            <input type="radio" name="q25" value="Settlement of options at any time"> Settlement of options at any time
+        </label><br>
+        <label>
+            <input type="radio" name="q25" value="No upfront premiums or liquidations"> No upfront premiums or liquidations
+            
+        </label><br>
+        <label>
+            <input type="radio" name="q25" value="It is an oracle less platform"> It is an oracle less platform 
+        </label><br>
+</div>
+
+        <input type="submit" value="Submit">
+    </form>
+    <div id="result"></div>
+</div>
+<script>
+document.getElementById('quiz-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    let score = 0;
+    // Check answers
+    const answers = {
+        q1: 'Tayaswap', // Correct answer for question 1
+        q2: 'Liquid Staking Protocol', // Correct answer for question 2
+        q3: 'Balancer',
+        q4: 'All of the above',
+        q5: 'Both option 1) and 2)',
+        q6: 'It combines concentrated (i.e., UniV3 style), ambient (i.e., UniV2 style), and knockout liquidity (which behaves like limit orders)', // Correct answer for question 5
+        q7:  'Lend, borrow, swap',
+        q8: 'Dual Investment, Dynamic AMM',
+        q9: 'LPs can easily manage impermanent loss for a particular token',
+        q10:'True',
+        q11:'Second Biggest',
+        q12:'Balancer',
+        q13:'Orderbook Dexes',
+        q14:'Market Making Strategies',
+        q15:'Permissioned',
+        q16:'All of the above',
+        q17:'Peer-to-Pool',
+        q18:'17',
+        q19:'Principal token, Yield token',
+        q20:'Distributed Validator technology (DVT)',
+        q21:'All involved parties undergo KYC and AML checks',
+        q22:'11',
+        q23:'Yes',
+        q24:'By facilitating trade settlement on-chain without requiring custody of funds',
+        q25:'It is an oracle less platform', // Add more answers here
+
+       
+    };
+    const form = event.target;
+    for (let i = 1; i <= Object.keys(answers)?.length; i++) {
+        const selectedOption = form.querySelector(`input[name="q${i}"]:checked`);
+        if (!selectedOption) {
+            // If no option is selected, color the correct option green and move to the next question
+            const correctAnswer = answers[`q${i}`];
+            const allOptions = form.querySelectorAll(`input[name="q${i}"]`);
+            allOptions.forEach(option => {
+                const optionLabel = option.parentNode;
+                if (option.value === correctAnswer) {
+                    optionLabel.classList.add('correct-answer');
+                } else {
+                    optionLabel.classList.add('incorrect-answer');
+                }
+            });
+            continue;
+        }
+        const selectedValue = selectedOption.value;
+        const correctAnswer = answers[`q${i}`];
+        const label = selectedOption.parentNode;
+        label.classList.remove('correct-answer', 'incorrect-answer');
+        if (selectedValue === correctAnswer) {
+            score++;
+            label.classList.add('correct-answer');
+        } else {
+            label.classList.add('incorrect-answer');
+        }
+        // Mark correct and incorrect options for each question
+        const allOptions = form.querySelectorAll(`input[name="q${i}"]`);
+        allOptions.forEach(option => {
+            const optionLabel = option.parentNode;
+            if (option.value === correctAnswer) {
+                optionLabel.classList.add('correct-answer');
+            } else {
+                optionLabel.classList.add('incorrect-answer');
+            }
+        });
+    }
+    document.getElementById('result').textContent = `You scored ${score} out of ${Object.keys(answers)?.length||"-"}.`;
+});
+
+window.addEventListener('load', function() {
+    document.getElementById('quiz-form').reset();
+});
+</script>
+</body>
+</html>
